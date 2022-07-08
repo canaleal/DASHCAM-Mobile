@@ -31,6 +31,13 @@ export default function LocationPage() {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>{text}</Text>
+
+      <Button 
+          title="Go To Image Picker Page"
+          onPress={
+            () => this.props.navigation.navigate( 'ImagePickerPage' )
+          }
+        />
     </View>
   );
 }

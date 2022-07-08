@@ -25,6 +25,20 @@ export default function ImagePickerPage() {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button title="Pick an image from camera roll" onPress={pickImage} />
       {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+
+      <Button 
+          title="Go To Location Page"
+          onPress={
+            () => this.props.navigation.navigate( 'LocationPage' )
+          }
+        />
+
+      <Button 
+          title="Go to Video Player Page"
+          onPress={
+            () => this.props.navigation.navigate( 'Video Player Page' )
+          }
+        />
     </View>
   );
 }
