@@ -9,6 +9,7 @@ const Stack = createNativeStackNavigator();
 import LocationPage from './src/pages/LocationPage';
 import ImagePickerPage from './src/pages/ImagePickerPage';
 import VideoPlayerPage from './src/pages/VideoPlayerPage';
+import MapPage from './src/pages/MapPage';
 
 export default function App() {
   return (
@@ -17,7 +18,9 @@ export default function App() {
         <Stack.Screen
           name="LocationPage"
           component={LocationPage}
+          
         />
+         <Stack.Screen name="MapPage" component={MapPage} />
         <Stack.Screen name="ImagePickerPage" component={ImagePickerPage} />
         <Stack.Screen name="VideoPlayerPage" component={VideoPlayerPage} />
       </Stack.Navigator>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Platform, Text, View, StyleSheet } from 'react-native';
+import { Platform, Text, View, StyleSheet, Button } from 'react-native';
 import Device from 'expo-device';
 import * as Location from 'expo-location';
 
-export default function LocationPage() {
+export default function LocationPage({navigation}) {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
@@ -35,9 +35,11 @@ export default function LocationPage() {
       <Button 
           title="Go To Image Picker Page"
           onPress={
-            () => this.props.navigation.navigate( 'ImagePickerPage' )
+            () => navigation.navigate( 'ImagePickerPage' )
           }
         />
+
+
     </View>
   );
 }

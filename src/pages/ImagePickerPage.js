@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Image, View, Platform } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 
-export default function ImagePickerPage() {
+export default function ImagePickerPage({navigation}) {
   const [image, setImage] = useState(null);
 
   const pickImage = async () => {
@@ -29,14 +29,14 @@ export default function ImagePickerPage() {
       <Button 
           title="Go To Location Page"
           onPress={
-            () => this.props.navigation.navigate( 'LocationPage' )
+            () => navigation.navigate( 'LocationPage' )
           }
         />
 
       <Button 
           title="Go to Video Player Page"
           onPress={
-            () => this.props.navigation.navigate( 'Video Player Page' )
+            () => navigation.navigate( 'VideoPlayerPage' )
           }
         />
     </View>
